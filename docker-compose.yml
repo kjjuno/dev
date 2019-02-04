@@ -1,14 +1,14 @@
 version: '3.4'
 
 services:
-    common:
-        image: kjjuno/dev:common
+    latest:
+        image: kjjuno/dev:latest
         build: ./common
     mono:
         image: kjjuno/dev:mono
         build: ./mono
         depends_on:
-        - common
+        - latest
     dotnet:
         image: kjjuno/dev:dotnet
         build: ./dotnet
